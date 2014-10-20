@@ -14,3 +14,33 @@ Globals
     font-size: $size;
     font-size: calculateRem($size);
 }
+
+//Site Variable 
+    $color: #fff;
+    $background-color: #e9d1b5;
+    $title-color: #de4f8d; //pink
+    $section-color: #242021; //blackish
+
+@mixin body-font-regular {
+    font-family: "source-sans-pro",sans-serif,helvetica;
+    font-style: normal;
+    font-weight: 300;
+}
+
+@mixin body-font-italic {
+    font-family: "source-sans-pro",sans-serif,helvetica;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@mixin body-font-bold {
+    font-family: "source-sans-pro",sans-serif,helvetica;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin headline-font {
+    font-family: "edo",sans-serif,helvetica;
+    font-style: normal;
+    font-weight: 400;
+}

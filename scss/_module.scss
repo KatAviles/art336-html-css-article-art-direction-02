@@ -3,3 +3,107 @@ Module Rules
     A Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different parts of the layout without breaking.
     When defining the rule set for a module, avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent or child selectors to target those elements. 
 */
+
+nav[role="navigation"] ul {
+    background-color: $section-color;
+    list-style-type: none;
+    margin-top: 0;
+}
+
+nav[role="navigation"] ul a {
+    //border: 1px solid $color;
+    color: $color;
+    display: inline-block;
+    @include fontSize(16px);
+    @include body-font-regular;
+    margin-left: 8px;
+    padding: 0px 6px;
+    text-decoration: none;
+    transition: border 400ms linear;
+    transition: color 400ms linear;
+}
+
+nav[role="navigation"] ul a:hover {
+    border: 1px solid darken($color, 20%);
+    @include body-font-bold;
+    color: darken($color, 30%);
+    transition: border 400ms linear;
+    transition: color 400ms linear;
+}
+
+header[role="banner"] {
+    background-color: $section-color;
+    color: $background-color;
+    padding: 12px;
+}
+
+header[role="banner"] h1 {
+    color: $color;
+}
+
+header[role="banner"] img { 
+    width: 70%;
+}
+
+header[role="banner"] p {
+    @include fontSize(16px);
+}
+
+header[role="banner"] a {
+    color: $background-color;
+    @include body-font-italic;
+    transition: color 400ms linear;
+}
+
+header[role="banner"] a:hover {
+    color: darken($background-color, 12%);
+    transition: color 400ms linear;
+}
+
+.contact svg {
+    width: 20px;
+    height: 20px;
+}
+
+.contact svg path { 
+    fill: #fff;
+    transition: fill 400ms linear;
+}
+
+.contact a:hover svg path { 
+    fill: lighten($background-color, 12%);
+    transition: fill 400ms linear;
+}
+
+.slides {
+    list-style: none;
+}
+
+main[role="main"] h1 {
+    background-color: $color;
+    color: $background-color;
+    padding: 0 8px;
+}
+
+ul ol {
+    background-color: #000;
+    padding: 10px;
+    margin-left: 0 10px;
+}
+
+//footer[role="contentinfo"] {
+    //@include body-font-italic;
+    //line-height: 1;
+    //padding: 4px 8px 8px 8px;
+//}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    @include body-font-italic;
+}
+
+a:hover {
+    color: darken($color, 30%);
+    transition: color 400ms linear;
+}
