@@ -29,9 +29,14 @@ h1 {
 
 h2 {
     @include fontSize(30px);
+    border-bottom: 2px #fff solid;
     margin: 0;
 }
 
+h3 {
+    border-bottom: 1px #fff solid;
+    border-top: 1px #fff solid;
+}
 
 img {
     max-width: 100%;
